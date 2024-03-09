@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="global.css">
+    </header>
+    <body>
+        <script>
+            var AllProducts = ["Desk1", "Desk2", "DeskSimple", "RTDx700", "RTD2"]
+            var ChosenProducts = []
+            function AddProduct(value) {
+                ChosenProducts.push(value)
+                // document.getElementById("ProductDisplay").innerText = ChosenProducts;
+                var x ="", i;
+                for (i=0; i<=ChosenProducts.length - 1; i++) {
+                x = x + "<div class={'hor-cent'}>" + "<p>" + AllProducts[ChosenProducts[i]] + "</p>" + "<p>" + "LKR 200,000" + "</p>" + "</div>";
+                }
+                document.getElementById("ProductDisplay").innerHTML = x;
+                document.getElementById("PriceDisplay").innerHTML = ChosenProducts.length * 200000;
+                }
+            function Clear() {
+                ChosenProducts = []
+                document.getElementById("ProductDisplay").innerHTML = "";
+                document.getElementById("PriceDisplay").innerHTML = ChosenProducts.length * 200000;
+            }
+        </script>
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img src="./menu-button.png" height="20" alt="Menu Button">
+                </button>
+                <div class="dropdown-content">
+                    <a href="./home_page.html">Home</a>
+                    <a href="./products_page.html">Products</a>
+                    <a href="./health_benefits_page.html">Health Benefits</a>
+                    <a href="./basket_page.html">Basket</a>
+                    <a href="./contact_page.html">Contact Us</a>
+                </div>
+            </div>
+            <p class="logo">SDC</p>
+        </div>
+        <div class="cart">
+            <p class="title-2">Cart</p>
+            <p id="ProductDisplay"></p>
+            <div class="total-sec total">
+                <div class="hor-cent align-center">Total : LKR<p id="PriceDisplay">0</p></div>
+                <button onclick="Clear()" class="ct-btn-2">Clear Cart</button>
+            </div>
+        </div>
+        <div class="benefit-holder">
+            <div class="benefit-text">
+                <p class="title-2">Desk 1</p>
+                <!-- <p class="para">Good posture, reducing the risk of musculoskeletal problems such as back and neck pain, is encouraged by the use of a well designed desk and ergonomic chair. In order to reduce the adverse effects of long sitting,adjustable tables enable users to change their positions and sit or stand.</p> -->
+                <button onclick="AddProduct(0)" class="ct-btn-2">Add to Cart</button>
+            </div>
+            <img class="benefit-img" src="https://media.wired.com/photos/5f36eed341cf5018b3d1cbf0/master/pass/Gear-Fully-Jarvis-Standing-Desk-SOURCE-Fully.jpg">
+        </div>
+        <div class="benefit-holder">
+            <div class="benefit-text">
+                <p class="title-2">Desk 2</p>
+                <!-- <p class="para">Good posture, reducing the risk of musculoskeletal problems such as back and neck pain, is encouraged by the use of a well designed desk and ergonomic chair. In order to reduce the adverse effects of long sitting,adjustable tables enable users to change their positions and sit or stand.</p> -->
+                <button onclick="AddProduct(1)" class="ct-btn-2">Add to Cart</button>
+            </div>
+            <img class="benefit-img" src="https://motiongrey.com/cdn/shop/products/motion-series-standing-desk-with-table-top-763910_2048x.jpg?v=1664203061">
+        </div>
+        <div class="benefit-holder">
+            <div class="benefit-text">
+                <p class="title-2">Desk Simple</p>
+                <!-- <p class="para">Good posture, reducing the risk of musculoskeletal problems such as back and neck pain, is encouraged by the use of a well designed desk and ergonomic chair. In order to reduce the adverse effects of long sitting,adjustable tables enable users to change their positions and sit or stand.</p> -->
+                <button onclick="AddProduct(2)" class="ct-btn-2">Add to Cart</button>
+            </div>
+            <img class="benefit-img" src="https://www.ergodirect.com/images/Loctek_/_Flexispot/19759/large/Flexispot-E7-Electric-Height-Adjustable-Pro-Plus-Standing-Desk_lg_1654923558.jpg">
+        </div>
+        <div class="benefit-holder">
+            <div class="benefit-text">
+                <p class="title-2">RTDx700</p>
+                <!-- <p class="para">Good posture, reducing the risk of musculoskeletal problems such as back and neck pain, is encouraged by the use of a well designed desk and ergonomic chair. In order to reduce the adverse effects of long sitting,adjustable tables enable users to change their positions and sit or stand.</p> -->
+                <button onclick="AddProduct(3)" class="ct-btn-2">Add to Cart</button>
+            </div>
+            <img class="benefit-img" src="https://m.media-amazon.com/images/I/614Uj0ix4kL._AC_UF894,1000_QL80_.jpg">
+        </div>
+        <div class="benefit-holder">
+            <div class="benefit-text">
+                <p class="title-2">RTD2</p>
+                <!-- <p class="para">Good posture, reducing the risk of musculoskeletal problems such as back and neck pain, is encouraged by the use of a well designed desk and ergonomic chair. In order to reduce the adverse effects of long sitting,adjustable tables enable users to change their positions and sit or stand.</p> -->
+                <button onclick="AddProduct(4)" class="ct-btn-2">Add to Cart</button>
+            </div>
+            <img class="benefit-img" src="https://assets.wfcdn.com/im/09994775/resize-h755-w755%5Ecompr-r85/2622/262234698/Home+Office+Height+Adjustable+Standing+Desk.jpg">
+        </div>
+        <div class="footer">
+            <p>Standing Desk Company (SDC) LTD</p>
+            <p>185 N J V Cooray Mawatha, Sri Jayawardenepura Kotte 10100</p>
+            <p>0112 888 288</p>
+        </div>
+    </body>
+</html>
